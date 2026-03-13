@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="AI Can Learn Scientific Taste introduces Reinforcement Learning from Community Feedback for scientific judgement and scientific ideation.">
+  <meta name="keywords" content="Scientific Taste, RLCF, SciJudgeBench, Scientific Judge, Scientific Thinker">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Can Learn Scientific Taste</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" target="_blank" href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" target="_blank" href="https://thinking-with-video.github.io/">
+            Thinking with Video
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">AI Can Learn Scientific Taste</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://github.com/tongjingqi/" target="_blank">Jingqi Tong</a><sup>1,2,3,*</sup>,</span>
+            <span class="author-block"><a href="https://www.mubuky.com/" target="_blank">Mingzhe Li</a><sup>1,2,3,*</sup>,</span>
+            <span class="author-block"><a href="https://github.com/lkdhy" target="_blank">Hangcheng Li</a><sup>1,2,3,*</sup>,</span>
+            <span class="author-block"><a href="https://openreview.net/profile?id=%7EYongzhuo_Yang1" target="_blank">Yongzhuo Yang</a><sup>1,3,&ddagger;</sup>,</span>
+            <span class="author-block"><a href="https://github.com/betmma" target="_blank">Yurong Mou</a><sup>1,2,3,&ddagger;</sup>,</span>
+            <span class="author-block">Weijie Ma<sup>1,2</sup>,</span>
+            <span class="author-block">Zhiheng Xi<sup>1</sup>,</span>
+            <span class="author-block">Hongji Chen<sup>1,3</sup>,</span>
+            <span class="author-block">Xiaoran Liu<sup>1,2,3</sup>,</span>
+            <span class="author-block">Qinyuan Cheng<sup>1,2,3</sup>,</span>
+            <span class="author-block">Ming Zhang<sup>1</sup>,</span>
+            <span class="author-block">Qiguang Chen<sup>5</sup>,</span>
+            <span class="author-block">Qipeng Guo<sup>2</sup>,</span>
+            <span class="author-block">Tianlei Ying<sup>1,2</sup>,</span>
+            <span class="author-block">Tianxiang Sun<sup>2</sup>,</span>
+            <span class="author-block">Yining Zheng<sup>1,2,3</sup>,</span>
+            <span class="author-block">Xinchi Chen<sup>1,3,&dagger;</sup>,</span>
+            <span class="author-block">Jun Zhao<sup>1,&dagger;</sup>,</span>
+            <span class="author-block">Ning Ding<sup>4</sup>,</span>
+            <span class="author-block">Xuanjing Huang<sup>1</sup>,</span>
+            <span class="author-block">Yugang Jiang<sup>1</sup>,</span>
+            <span class="author-block"><a href="https://xpqiu.github.io/en.html" target="_blank">Xipeng Qiu</a><sup>1,2,3,&dagger;</sup></span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>Fudan University,</span>
+            <span class="author-block"><sup>2</sup>Shanghai Innovation Institute,</span>
+            <span class="author-block"><sup>3</sup>OpenMOSS Team,</span>
+            <span class="author-block"><sup>4</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>5</sup>Central South University</span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">* Equal contribution. &dagger; Corresponding author. &ddagger; Core contributors.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper Coming Soon</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a target="_blank" href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0rem">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <span class="tldr-badge">TL;DR</span>
+
+        <div class="content has-text-justified">
+          <p style="font-size: 1.25rem; text-align: center; margin-top: 0.8rem;">
+            We treat <strong>scientific taste</strong> as a learnable objective and show that
+            <br/>
+            <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
+              Reinforcement Learning from Community Feedback can train models
+              <br/>to judge and propose higher-impact scientific ideas.
+            </span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0rem">
+  <div class="container is-max-wider">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Great scientists have strong judgement and foresight, closely tied to what we call scientific taste.
+            Here, we use the term to refer to the capacity to judge and propose research ideas with high potential impact.
+            However, most related research focuses on improving an AI scientist's executive capability, while enhancing
+            an AI's scientific taste remains underexplored.
+          </p>
+          <p>
+            We propose <b>Reinforcement Learning from Community Feedback (RLCF)</b>, a training paradigm that uses
+            large-scale community signals as supervision and formulates scientific taste learning as a preference modeling
+            and alignment problem. For preference modeling, we train <b>Scientific Judge</b> on 700K field- and time-matched
+            pairs of high- vs. low-citation papers. For preference alignment, using Scientific Judge as a reward model,
+            we train <b>Scientific Thinker</b> to propose research ideas with high potential impact.
+          </p>
+          <p>
+            Experiments show that Scientific Judge outperforms strong LLM baselines such as GPT-5.2 and Gemini 3 Pro,
+            and generalizes to future-year test sets, unseen fields, and peer-review preference. Scientific Thinker further
+            proposes research ideas with higher potential impact than strong baselines. Our findings show that AI can learn
+            scientific taste, marking a key step toward human-level AI scientists.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-wider">
+
+    <div class="columns">
+
+      <div class="column is-5">
+        <h2 class="title is-3">
+          🌏 Why Scientific Taste Matters
+        </h2>
+
+        <div class="content">
+          <div class="content">
+
+            <ul>
+              <li style="margin-top: 2rem;">
+                <span style="font-weight: bolder;">Scientific taste is more than execution.</span>
+                AI scientists increasingly help with literature search and experimentation, but choosing which ideas are worth
+                pursuing remains a separate capability.
+              </li>
+
+              <li style="margin-top: 2rem;">
+                <span style="font-weight: bolder;">Community feedback provides supervision.</span>
+                In science, long-term community judgement is reflected in signals such as citations, which can be turned into
+                matched preference data.
+              </li>
+
+              <li style="margin-top: 2rem;">
+                <span style="font-weight: bolder;">Taste can be modeled and aligned.</span>
+                Once preference signals are constructed, a model can learn to judge ideas and then be used as a reward model
+                to improve idea generation itself.
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-7 has-text-centered">
+        <img
+          src="static/images/concept.png"
+          class="interpolation-image"
+          width="100%"
+        />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-wider">
+
+    <div class="columns">
+
+      <div class="column is-5">
+        <h2 class="title is-3">
+          ⚙️ RLCF Formulation
+        </h2>
+
+        <h3 class="title is-4">
+          Pipeline
+        </h3>
+
+        <div class="content">
+          <div class="content">
+
+            <ul>
+              <li style="margin-top: 1rem;">
+                <span style="font-weight: bolder;">Construct community preference.</span>
+                We pair papers from the same field and publication period, then label the higher-citation paper as preferred.
+              </li>
+
+              <li style="margin-top: 1rem;">
+                <span style="font-weight: bolder;">Train Scientific Judge.</span>
+                A generative reward model reasons over a pair of papers and predicts which one is more likely to have higher impact.
+              </li>
+
+              <li style="margin-top: 1rem;">
+                <span style="font-weight: bolder;">Train Scientific Thinker.</span>
+                Using Scientific Judge as the reward model, a policy model learns to propose follow-up research ideas with higher
+                potential impact through comparison-based GRPO.
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <h3 class="title is-4">
+          Position
+        </h3>
+
+        <div class="content">
+          <p> Our central claim is that scientific taste is not mystical or purely subjective. When grounded in large-scale community feedback, it becomes a learnable preference signal for both judgement and ideation. </p>
+        </div>
+
+      </div>
+
+      <div class="column is-7 has-text-centered">
+        <img
+          src="static/images/formulation.png"
+          class="interpolation-image"
+          width="100%"
+        />
+      </div>
+
+    </div>
+    <div class="content hypothesis-box">
+      <p class="hypothesis-title">
+        The Core Thesis
+      </p>
+
+      <p class="hypothesis-text">
+        Large-scale community feedback can be converted into matched preferences that enable models to
+        learn <span style="color: hsl(204, 86%, 53%);">scientific judgement</span> and improve
+        <span style="color: hsl(204, 86%, 53%);">scientific ideation</span>.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="results">
+  <div class="container is-max-wider">
+
+    <div class="columns">
+
+      <div class="column is-5">
+        <h2 class="title is-3">
+          🏆 SciJudgeBench and Main Results
+        </h2>
+
+        <div class="content">
+          <p>
+            <span style="color: hsl(204, 86%, 53%);">SciJudgeBench</span> is built from 2.1M arXiv papers published through 2024,
+            producing 696,758 field- and time-matched citation-based preference pairs.
+          </p>
+        </div>
+
+
+        <div class="content">
+          <div class="content">
+
+            <ul>
+              <li style="margin-top: 1rem;">
+                <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
+                  In-domain scientific judgement
+                </span>:
+                paired paper preference prediction across Computer Science, Mathematics, Physics, and Other fields.
+              </li>
+
+              <li style="margin-top: 1rem;">
+                <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
+                  Generalization settings
+                </span>:
+                future-year papers, ICLR peer-review preference, and bioRxiv biology transfer.
+              </li>
+
+              <li style="margin-top: 1rem;">
+                <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
+                  Ideation evaluation
+                </span>:
+                pairwise win-rate comparisons for Scientific Thinker against its base policy and strong proprietary models.
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="column is-7 has-text-centered">
+        <img
+          src="static/images/benchmark.png"
+          class="interpolation-image"
+          width="100%"
+        />
+      </div>
+
+    </div>
+
+    <h3 class="title is-4">
+      Leaderboard
+    </h3>
+
+    <p class="content has-text-centered">
+      <strong style="font-size: larger;">
+        🏆 Scientific Judge on SciJudgeBench and OOD Settings
+      </strong>
+    </p>
+
+    <p class="content has-text-centered">
+      <i>
+        We report pairwise accuracy with position-swap consistency on in-domain and out-of-domain evaluations.
+      </i>
+    </p>
+
+    <style>
+      .table-wrapper {
+        overflow-x: auto;
+        margin: 2rem 0;
+      }
+
+      .web-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 15px;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      }
+
+      .web-table th,
+      .web-table td {
+        padding: 12px 14px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+        white-space: nowrap;
+      }
+
+      .web-table th {
+        background: #f7f9fc;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .web-table td:first-child,
+      .web-table th:first-child {
+        text-align: left;
+        font-weight: 500;
+      }
+
+      .web-table > thead > tr > th,
+      .web-table > tbody > tr > td {
+        text-align: center;
+      }
+
+      .web-table > thead > tr > th:first-child,
+      .web-table > tbody > tr > td:first-child {
+        text-align: left;
+      }
+
+      .web-table tbody tr:hover {
+        background: #f5faff;
+      }
+
+      .group-row td {
+        background: #f0f4f8;
+        font-weight: 600;
+        color: #444;
+        text-align: center !important;
+      }
+
+      .best {
+        color: #3273dc;
+        font-weight: 700;
+      }
+
+      .second {
+        color: #555;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    </style>
+
+
+    <div class="table-wrapper">
+    <table class="web-table">
+
+      <thead>
+        <tr>
+          <th>Models</th>
+          <th>In-Domain</th>
+          <th>Future-Year</th>
+          <th>ICLR Review</th>
+          <th>bioRxiv</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr class="group-row">
+          <td colspan="5">Scientific Judge Models</td>
+        </tr>
+
+        <tr>
+          <td>Qwen3-4B-Instruct</td>
+          <td>60.3</td>
+          <td>68.3</td>
+          <td>65.3</td>
+          <td>56.9</td>
+        </tr>
+
+        <tr>
+          <td>SciJudge-Qwen3-4B</td>
+          <td>75.3</td>
+          <td>74.5</td>
+          <td>79.1</td>
+          <td>57.5</td>
+        </tr>
+
+        <tr>
+          <td>Qwen3-30B-A3B-Instruct</td>
+          <td>66.3</td>
+          <td>71.6</td>
+          <td>76.8</td>
+          <td>45.0</td>
+        </tr>
+
+        <tr>
+          <td class="best">SciJudge-Qwen3-30B</td>
+          <td class="second">80.6</td>
+          <td class="second">78.2</td>
+          <td class="best">87.7</td>
+          <td class="best">71.2</td>
+        </tr>
+
+        <tr>
+          <td class="best">SciJudge-Qwen2.5-32B</td>
+          <td class="best">83.7</td>
+          <td>74.1</td>
+          <td class="second">84.8</td>
+          <td class="second">68.1</td>
+        </tr>
+
+        <tr class="group-row">
+          <td colspan="5">Strong Baselines</td>
+        </tr>
+
+        <tr>
+          <td>GPT-5.2-Thinking</td>
+          <td>72.7</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+
+        <tr>
+          <td>GLM-5</td>
+          <td>73.6</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+
+        <tr>
+          <td>Gemini-3.0-Pro-Preview</td>
+          <td>75.7</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+    </div>
+
+    <div class="table-wrapper">
+
+    <p class="content has-text-centered">
+      <strong style="font-size: larger; margin-bottom: 0.5rem;">🏆 Scientific Thinker Win Rates Against Strong Models</strong>
+    </p>
+
+    <table class="web-table">
+
+      <thead>
+        <tr>
+          <th>Models</th>
+          <th>GPT-5.2-high</th>
+          <th>GLM-5</th>
+          <th>Gemini 3 Pro</th>
+          <th>Average</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr class="group-row">
+          <td colspan="5">In-Domain</td>
+        </tr>
+
+        <tr>
+          <td>Qwen3-30B-A3B-Thinking</td>
+          <td>37.5</td>
+          <td>33.0</td>
+          <td>20.5</td>
+          <td>30.3</td>
+        </tr>
+
+        <tr>
+          <td class="best">SciThinker-30B</td>
+          <td class="best">61.0</td>
+          <td class="best">58.5</td>
+          <td class="best">43.0</td>
+          <td class="best">54.2</td>
+        </tr>
+
+        <tr class="group-row">
+          <td colspan="5">Out-of-Domain</td>
+        </tr>
+
+        <tr>
+          <td>Qwen3-30B-A3B-Thinking</td>
+          <td>36.0</td>
+          <td>29.5</td>
+          <td>18.0</td>
+          <td>27.8</td>
+        </tr>
+
+        <tr>
+          <td class="best">SciThinker-30B</td>
+          <td class="best">59.0</td>
+          <td class="best">61.0</td>
+          <td class="best">42.5</td>
+          <td class="best">54.2</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-wider">
+
+    <div class="columns">
+
+      <div class="column is-5">
+        <h2 class="title is-3">
+          🧪 Key Findings
+        </h2>
+
+        <h3 class="title is-4">
+          Settings
+        </h3>
+
+        <div class="content">
+          <div class="content">
+
+            <ul>
+              <li style="margin-top: 1rem;">
+                <span style="font-weight: bolder;">Preference modeling</span>:
+                Scientific Judge is trained with GRPO on citation-based pairwise supervision and evaluated with position-swap consistency.
+              </li>
+
+              <li style="margin-top: 1rem;">
+                <span style="font-weight: bolder;">Preference alignment</span>:
+                Scientific Thinker is trained with comparison-based GRPO using Scientific Judge as the reward model.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="title is-4">
+          Results
+        </h3>
+
+
+        <div class="content hypothesis-box">
+
+          <ol class="finding-list">
+
+            <li>
+              <b>Scientific judgement scales with both data and model size.</b>
+              Larger models and more preference data consistently improve in-domain performance.
+            </li>
+
+            <li>
+              <b>Learned judgement transfers across time.</b>
+              Scientific Judge generalizes to papers published after the training period.
+            </li>
+
+            <li>
+              <b>Learned judgement transfers across fields and metrics.</b>
+              Gains persist on bioRxiv biology papers and on ICLR peer-review preference.
+            </li>
+
+            <li>
+              <b>Scientific Thinker improves ideation quality.</b>
+              The trained policy model strongly outperforms its base policy on both in-domain and out-of-domain settings.
+            </li>
+
+            <li>
+              <b>AI can learn scientific taste.</b>
+              Together, the results suggest that scientific judgement and high-potential ideation can both be improved through RLCF.
+            </li>
+
+          </ol>
+
+        </div>
+
+
+      </div>
+
+      <div class="column is-7 has-text-centered">
+        <img src="static/images/sft_performance_1x8.png" class="interpolation-image" style="margin-top:5rem;" width="100%"/>
+        <p class="content has-text-centered">
+          <i>Scaling trends for scientific judgement across model size and training data.</i>
+        </p>
+        <img src="static/images/rl_performance.png" class="interpolation-image" style="margin-top:20px;" width="85%"/>
+        <p class="content has-text-centered">
+          <i>Scientific Thinker win rates after preference alignment.</i>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-wider">
+    <div class="rows">
+      <div class="row is-full-width half-width">
+        <h2 class="title is-3 has-text-centered"><span>🌌 Figures at a Glance</span></h2>
+        <p class="content has-text-centered">
+          A compact summary of the paper's main experimental story: preference modeling produces strong scientific judgement,
+          and preference alignment further improves ideation quality.
+        </p>
+        <div class="content has-text-centered">
+          <img src="static/images/showcase.png" class="interpolation-image" style="margin-top:20px;" width="80%"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="citation">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3  has-text-centered">Citation</h2>
+    <pre><code>@misc{tong2026aicanlearnscientifictaste,
+    title={AI Can Learn Scientific Taste},
+    author={Tong, Jingqi and Li, Mingzhe and Li, Hangcheng and Yang, Yongzhuo and Mou, Yurong and others},
+    year={2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste" class="external-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
