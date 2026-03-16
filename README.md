@@ -3,9 +3,11 @@
 # AI Can Learn Scientific Taste
 
 <p>
-  <strong>Paper:</strong> Coming Soon
+  <strong>Paper:</strong> <a href="AI%20Can%20Learn%20Scientifc%20Taste.pdf">AI Can Learn Scientifc Taste</a>
   &nbsp;|&nbsp;
-  <strong>Code:</strong> Documentation Release
+  <strong>Data &amp; Models:</strong> <a href="https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste">Hugging Face</a>
+  &nbsp;|&nbsp;
+  <strong>Code:</strong> <a href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste">GitHub Repository</a>
   &nbsp;|&nbsp;
   <strong>License:</strong> MIT
 </p>
