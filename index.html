@@ -103,11 +103,12 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a class="external-link button is-normal is-rounded is-dark">
+                <a target="_blank" href="https://arxiv.org/abs/2603.14473"
+                  class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                      <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>Paper Coming Soon</span>
+                  <span>Paper</span>
                 </a>
               </span>
 
@@ -118,6 +119,16 @@
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a target="_blank" href="https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <img src="static/images/hf-logo.png" alt="HuggingFace" style="height: 1.2em; vertical-align: middle;">
+                  </span>
+                  <span>Models</span>
                   </a>
               </span>
             </div>
@@ -222,10 +233,13 @@
 
       <div class="column is-7 has-text-centered">
         <img
-          src="static/images/concept.png"
+          src="static/images/performance_teaser.png"
           class="interpolation-image"
           width="100%"
         />
+        <p class="content has-text-centered" style="margin-top: 0.5rem;">
+          <i>Scientific Judge (small models) outperforms much larger baselines; Scientific Thinker achieves strong win rates.</i>
+        </p>
       </div>
 
     </div>
@@ -272,14 +286,6 @@
           </div>
         </div>
 
-        <h3 class="title is-4">
-          Position
-        </h3>
-
-        <div class="content">
-          <p> Our central claim is that scientific taste is not mystical or purely subjective. When grounded in large-scale community feedback, it becomes a learnable preference signal for both judgement and ideation. </p>
-        </div>
-
       </div>
 
       <div class="column is-7 has-text-centered">
@@ -297,6 +303,7 @@
       </p>
 
       <p class="hypothesis-text">
+        Scientific taste is not mystical or purely subjective.
         Large-scale community feedback can be converted into matched preferences that enable models to
         learn <span style="color: hsl(204, 86%, 53%);">scientific judgement</span> and improve
         <span style="color: hsl(204, 86%, 53%);">scientific ideation</span>.
@@ -311,61 +318,39 @@
 <section class="section" id="results">
   <div class="container is-max-wider">
 
-    <div class="columns">
+    <h2 class="title is-3">
+      🏆 SciJudgeBench and Main Results
+    </h2>
 
-      <div class="column is-5">
-        <h2 class="title is-3">
-          🏆 SciJudgeBench and Main Results
-        </h2>
+    <div class="content">
+      <p>
+        <span style="color: hsl(204, 86%, 53%);">SciJudgeBench</span> is built from 2.1M arXiv papers published through 2024,
+        producing 696,758 field- and time-matched citation-based preference pairs.
+        We evaluate across three settings:
+      </p>
 
-        <div class="content">
-          <p>
-            <span style="color: hsl(204, 86%, 53%);">SciJudgeBench</span> is built from 2.1M arXiv papers published through 2024,
-            producing 696,758 field- and time-matched citation-based preference pairs.
-          </p>
-        </div>
+      <ul>
+        <li>
+          <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
+            In-domain scientific judgement
+          </span>:
+          paired paper preference prediction across Computer Science, Mathematics, Physics, and Other fields.
+        </li>
 
+        <li>
+          <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
+            Generalization settings
+          </span>:
+          future-year papers, ICLR peer-review preference, and bioRxiv biology transfer.
+        </li>
 
-        <div class="content">
-          <div class="content">
-
-            <ul>
-              <li style="margin-top: 1rem;">
-                <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
-                  In-domain scientific judgement
-                </span>:
-                paired paper preference prediction across Computer Science, Mathematics, Physics, and Other fields.
-              </li>
-
-              <li style="margin-top: 1rem;">
-                <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
-                  Generalization settings
-                </span>:
-                future-year papers, ICLR peer-review preference, and bioRxiv biology transfer.
-              </li>
-
-              <li style="margin-top: 1rem;">
-                <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
-                  Ideation evaluation
-                </span>:
-                pairwise win-rate comparisons for Scientific Thinker against its base policy and strong proprietary models.
-              </li>
-            </ul>
-
-          </div>
-        </div>
-
-      </div>
-
-
-      <div class="column is-7 has-text-centered">
-        <img
-          src="static/images/benchmark.png"
-          class="interpolation-image"
-          width="100%"
-        />
-      </div>
-
+        <li>
+          <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
+            Ideation evaluation
+          </span>:
+          pairwise win-rate comparisons for Scientific Thinker against its base policy and strong proprietary models.
+        </li>
+      </ul>
     </div>
 
     <h3 class="title is-4">
@@ -471,7 +456,7 @@
       <tbody>
 
         <tr class="group-row">
-          <td colspan="5">Scientific Judge Models</td>
+          <td colspan="5">Base Models</td>
         </tr>
 
         <tr>
@@ -483,6 +468,18 @@
         </tr>
 
         <tr>
+          <td>Qwen3-30B-A3B-Instruct</td>
+          <td>66.3</td>
+          <td>71.6</td>
+          <td>76.8</td>
+          <td>45.0</td>
+        </tr>
+
+        <tr class="group-row">
+          <td colspan="5">Scientific Judge Models</td>
+        </tr>
+
+        <tr>
           <td>SciJudge-Qwen3-4B</td>
           <td>75.3</td>
           <td>74.5</td>
@@ -491,27 +488,11 @@
         </tr>
 
         <tr>
-          <td>Qwen3-30B-A3B-Instruct</td>
-          <td>66.3</td>
-          <td>71.6</td>
-          <td>76.8</td>
-          <td>45.0</td>
-        </tr>
-
-        <tr>
           <td class="best">SciJudge-Qwen3-30B</td>
-          <td class="second">80.6</td>
-          <td class="second">78.2</td>
+          <td class="best">80.6</td>
+          <td class="best">78.2</td>
           <td class="best">87.7</td>
           <td class="best">71.2</td>
-        </tr>
-
-        <tr>
-          <td class="best">SciJudge-Qwen2.5-32B</td>
-          <td class="best">83.7</td>
-          <td>74.1</td>
-          <td class="second">84.8</td>
-          <td class="second">68.1</td>
         </tr>
 
         <tr class="group-row">
@@ -691,11 +672,11 @@
       </div>
 
       <div class="column is-7 has-text-centered">
-        <img src="static/images/sft_performance_1x8.png" class="interpolation-image" style="margin-top:5rem;" width="100%"/>
+        <img src="static/images/scaling_curve.png" class="interpolation-image" style="margin-top:5rem;" width="100%"/>
         <p class="content has-text-centered">
           <i>Scaling trends for scientific judgement across model size and training data.</i>
         </p>
-        <img src="static/images/rl_performance.png" class="interpolation-image" style="margin-top:20px;" width="85%"/>
+        <img src="static/images/thinker_winrate.png" class="interpolation-image" style="margin-top:20px;" width="60%"/>
         <p class="content has-text-centered">
           <i>Scientific Thinker win rates after preference alignment.</i>
         </p>
@@ -707,31 +688,17 @@
 
 
 
-<section class="section">
-  <div class="container is-max-wider">
-    <div class="rows">
-      <div class="row is-full-width half-width">
-        <h2 class="title is-3 has-text-centered"><span>🌌 Figures at a Glance</span></h2>
-        <p class="content has-text-centered">
-          A compact summary of the paper's main experimental story: preference modeling produces strong scientific judgement,
-          and preference alignment further improves ideation quality.
-        </p>
-        <div class="content has-text-centered">
-          <img src="static/images/showcase.png" class="interpolation-image" style="margin-top:20px;" width="80%"/>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <section class="section" id="citation">
   <div class="container is-max-desktop content">
     <h2 class="title is-3  has-text-centered">Citation</h2>
-    <pre><code>@misc{tong2026aicanlearnscientifictaste,
+    <pre><code>@misc{tong2026ailearnscientifictaste,
     title={AI Can Learn Scientific Taste},
-    author={Tong, Jingqi and Li, Mingzhe and Li, Hangcheng and Yang, Yongzhuo and Mou, Yurong and others},
+    author={Jingqi Tong and Mingzhe Li and Hangcheng Li and Yongzhuo Yang and Yurong Mou and Weijie Ma and Zhiheng Xi and Hongji Chen and Xiaoran Liu and Qinyuan Cheng and Ming Zhang and Qiguang Chen and Weifeng Ge and Qipeng Guo and Tianlei Ying and Tianxiang Sun and Yining Zheng and Xinchi Chen and Jun Zhao and Ning Ding and Xuanjing Huang and Yugang Jiang and Xipeng Qiu},
     year={2026},
+    eprint={2603.14473},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL},
+    url={https://arxiv.org/abs/2603.14473},
 }</code></pre>
   </div>
 </section>
