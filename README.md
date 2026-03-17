@@ -12,6 +12,12 @@ English | [中文](README_zh.md)
 
 </div>
 
+<div align="center">
+  <a href="https://huggingface.co/papers/week/2026-W12">
+    <img src="assets/huggingface_paper_gold_week.svg"/>
+  </a>
+</div>
+
 ## 🎊 News
 
 - [2026.03] 📄 Paper available on arXiv. [[arXiv](https://arxiv.org/abs/2603.14473)]

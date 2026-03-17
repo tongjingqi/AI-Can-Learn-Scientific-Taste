@@ -12,6 +12,12 @@
 
 </div>
 
+<div align="center">
+  <a href="https://huggingface.co/papers/week/2026-W12">
+    <img src="assets/huggingface_paper_gold_week.svg"/>
+  </a>
+</div>
+
 ## 🎊 最新动态
 
 - [2026.03] 📄 论文已发布在 arXiv 上。[[arXiv](https://arxiv.org/abs/2603.14473)]
