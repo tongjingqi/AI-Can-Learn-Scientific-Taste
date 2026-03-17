@@ -21,6 +21,7 @@
 
 ## 🎊 最新动态
 
+- [2026.03] 🎮 在线 Demo 现已上线！[[Demo](https://yatao-zhuozhuo.github.io/AI-Innovator/)]
 - [2026.03] 📄 论文已发布在 arXiv 上。[[arXiv](https://arxiv.org/abs/2603.14473)]
 - [2026.03] 🤗 模型已发布在 Hugging Face 上。[[Collection](https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste)]
 
