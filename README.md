@@ -36,7 +36,7 @@ English | [中文](README_zh.md)
 
 ## 📜 Introduction
 
-Great scientists do not rely on execution ability alone. They also possess strong judgement and foresight, which we refer to as **scientific taste**: the capacity to judge and propose research ideas with high potential impact.
+Great scientists have strong judgement and foresight, closely tied to what we call **scientific taste**: the capacity to judge and propose research ideas with high potential impact. However, most related research focuses on improving an AI scientist's executive capability, while enhancing an AI's scientific taste remains underexplored.
 
 We propose **Reinforcement Learning from Community Feedback (RLCF)**, a training paradigm that uses large-scale community signals as supervision and formulates scientific taste learning as a preference modeling and alignment problem.
 
@@ -56,7 +56,7 @@ RLCF consists of three stages:
 1. **Construct community preference**
    Citations are converted into pairwise preference signals by matching papers within the same field and publication period.
 2. **Preference modeling with Scientific Judge**
-   We train a generative reward model with GRPO to determine which of two papers is more likely to receive stronger community reception.
+   We train a generative reward model with GRPO that reasons over a pair of paper abstracts and predicts which one is more likely to have higher impact.
 3. **Preference alignment with Scientific Thinker**
    We use Scientific Judge as a reward model and optimize a policy model with comparison-based GRPO to generate higher-impact research ideas.
 
@@ -64,29 +64,30 @@ RLCF consists of three stages:
 
 ### Scientific Judge
 
-- A scientific judgement model trained on pairwise comparisons of titles, abstracts, and publication dates.
-- Learns to identify which paper has higher potential impact.
-- Serves both as an evaluator of newborn papers and as the reward model for ideation training.
+- A generative reward model that reasons over paired paper abstracts and predicts which has higher potential impact.
+- Trained with GRPO on 696K field- and time-matched citation-based preference pairs.
+- Serves both as an evaluator of research ideas and as the reward model for Scientific Thinker training.
 
 ### Scientific Thinker
 
 - A scientific ideation policy trained with Scientific Judge as the reward model.
-- Given a seed paper, it proposes follow-up research ideas with high potential impact.
+- Takes a paper title and abstract as input and proposes follow-up research ideas with higher potential impact aligned with community preference.
 - Optimized with comparison-based GRPO for open-ended idea generation.
 
 ### SciJudgeBench
 
 - **696,758** preference pairs and roughly **1.4M** unique papers.
 - Built from arXiv papers across **Computer Science**, **Mathematics**, **Physics**, and **Other** scientific fields.
-- Evaluated on four settings: **in-domain**, **temporal OOD** (future-year papers), **metric OOD** (ICLR peer review), and **field OOD** (bioRxiv biology papers).
+- Evaluated on three main settings: **in-domain**, **temporal OOD** (future-year papers), and **metric OOD** (ICLR peer review), plus **bioRxiv** as an additional cross-field evaluation.
 
 ## 📈 Key Results
 
 Our paper shows that scientific taste can be learned and transferred:
 
 - **Scientific judgement scales** with both data size and model size.
-- **Learned judgement generalizes** across time, across fields, and from citations to peer-review preferences.
-- **Scientific Thinker improves ideation quality** and surpasses strong baselines in pairwise comparisons.
+- **Scientific Judge-Qwen3-30B surpasses GPT-5.2, GLM-5, and Gemini 3 Pro** on in-domain evaluation (80.6 vs. 75.7 for the best baseline), and generalizes to future-year papers (+55.1 points over base) and ICLR peer-review preference.
+- **Learned judgement generalizes** across time, across fields (bioRxiv), and from citations to peer-review preferences.
+- **Scientific Thinker achieves 54.2% average win-rate** against GPT-5.2, GLM-5, and Gemini 3 Pro, strongly outperforming its base policy (30.3%) on both in-domain and out-of-domain settings.
 
 <div align="center">
   <img src="assets/performance_teaser.png" width="100%" alt="Main performance results" />
