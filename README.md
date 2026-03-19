@@ -112,3 +112,5 @@ If you find our work helpful, please consider citing:
 ## ⚖️ License
 
 This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+
+> **Note:** The currently released training and test sets are updated versions with improved data quality. This update does not affect the experimental conclusions reported in the paper. The results in the paper were based on earlier versions of the data; updated results on the new data will be released soon. Additionally, larger models with newer architectures (Qwen3.5 series) are still under training — stay tuned!
