@@ -98,14 +98,11 @@ Our paper shows that scientific taste can be learned and transferred:
 If you find our work helpful, please consider citing:
 
 ```bibtex
-@misc{tong2026ailearnscientifictaste,
-    title={AI Can Learn Scientific Taste},
-    author={Jingqi Tong and Mingzhe Li and Hangcheng Li and Yongzhuo Yang and Yurong Mou and Weijie Ma and Zhiheng Xi and Hongji Chen and Xiaoran Liu and Qinyuan Cheng and Ming Zhang and Qiguang Chen and Weifeng Ge and Qipeng Guo and Tianlei Ying and Tianxiang Sun and Yining Zheng and Xinchi Chen and Jun Zhao and Ning Ding and Xuanjing Huang and Yugang Jiang and Xipeng Qiu},
-    year={2026},
-    eprint={2603.14473},
-    archivePrefix={arXiv},
-    primaryClass={cs.CL},
-    url={https://arxiv.org/abs/2603.14473},
+@article{tong2026ai,
+  title={AI Can Learn Scientific Taste},
+  author={Tong, Jingqi and Li, Mingzhe and Li, Hangcheng and Yang, Yongzhuo and Mou, Yurong and Ma, Weijie and Xi, Zhiheng and Chen, Hongji and Liu, Xiaoran and Cheng, Qinyuan and others},
+  journal={arXiv preprint arXiv:2603.14473},
+  year={2026}
 }
 ```
 
