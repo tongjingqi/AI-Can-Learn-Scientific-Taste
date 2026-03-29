@@ -6,7 +6,7 @@
 <a href='https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models%20%26%20Datasets-yellow'></a>
 <a href='https://huggingface.co/papers/2603.14473'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-yellow'></a>
 <a href='https://tongjingqi.github.io/AI-Can-Learn-Scientific-Taste/'><img src='https://img.shields.io/badge/🌐%20Project-Page-blue'></a>
-<a href='https://yatao-zhuozhuo.github.io/AI-Innovator/'><img src='https://img.shields.io/badge/🎮%20Demo-Online-orange'></a>
+<a href='https://ai-innovator.open-moss.com/'><img src='https://img.shields.io/badge/🎮%20Demo-Online-orange'></a>
 <a href='LICENSE'><img src='https://img.shields.io/badge/License-Apache%202.0-green.svg'></a>
 
 [English](README.md) | 中文
@@ -21,7 +21,7 @@
 
 ## 🎊 最新动态
 
-- [2026.03] 🎮 在线 Demo 现已上线！[[Demo](https://yatao-zhuozhuo.github.io/AI-Innovator/)]
+- [2026.03] 🎮 在线 Demo 现已上线！[[Demo](https://ai-innovator.open-moss.com/)]
 - [2026.03] 📄 论文已发布在 arXiv 上。[[arXiv](https://arxiv.org/abs/2603.14473)]
 - [2026.03] 🤗 模型已发布在 Hugging Face 上。[[Collection](https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste)]
 

@@ -6,7 +6,7 @@
 <a href='https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models%20%26%20Datasets-yellow'></a>
 <a href='https://huggingface.co/papers/2603.14473'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-yellow'></a>
 <a href='https://tongjingqi.github.io/AI-Can-Learn-Scientific-Taste/'><img src='https://img.shields.io/badge/🌐%20Project-Page-blue'></a>
-<a href='https://yatao-zhuozhuo.github.io/AI-Innovator/'><img src='https://img.shields.io/badge/🎮%20Demo-Online-orange'></a>
+<a href='https://ai-innovator.open-moss.com/'><img src='https://img.shields.io/badge/🎮%20Demo-Online-orange'></a>
 <a href='LICENSE'><img src='https://img.shields.io/badge/License-Apache%202.0-green.svg'></a>
 
 English | [中文](README_zh.md)
@@ -21,7 +21,7 @@ English | [中文](README_zh.md)
 
 ## 🎊 News
 
-- [2026.03] 🎮 Online Demo is now available! [[Demo](https://yatao-zhuozhuo.github.io/AI-Innovator/)]
+- [2026.03] 🎮 Online Demo is now available! [[Demo](https://ai-innovator.open-moss.com/)]
 - [2026.03] 📄 Paper available on arXiv. [[arXiv](https://arxiv.org/abs/2603.14473)]
 - [2026.03] 🤗 Models released on Hugging Face. [[Collection](https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste)]
 
