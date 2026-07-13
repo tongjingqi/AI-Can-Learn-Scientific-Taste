@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Can Learn Scientific Taste</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -101,11 +101,11 @@
             <span class="author-block">* Equal contribution. &dagger; Corresponding author. &ddagger; Core contributors.</span>
           </div>
 
-          <div class="column has-text-centered">
+          <div class="has-text-centered publication-actions">
             <div class="publication-links">
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2603.14473"
-                  class="external-link button is-normal is-rounded cta-secondary">
+                  class="external-link button is-normal is-rounded cta-link">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -115,7 +115,7 @@
 
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste"
-                  class="external-link button is-normal is-rounded cta-secondary">
+                  class="external-link button is-normal is-rounded cta-link">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
@@ -125,7 +125,7 @@
 
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste"
-                  class="external-link button is-normal is-rounded cta-secondary">
+                  class="external-link button is-normal is-rounded cta-link">
                   <span class="icon">
                       <img src="static/images/hf-logo.png" alt="HuggingFace" class="hf-logo">
                   </span>
@@ -135,7 +135,7 @@
 
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/papers/2603.14473"
-                  class="external-link button is-normal is-rounded cta-secondary">
+                  class="external-link button is-normal is-rounded cta-link">
                   <span class="icon">
                       <img src="static/images/hf-logo.png" alt="HuggingFace" class="hf-logo">
                   </span>
@@ -145,7 +145,7 @@
 
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://paperank.open-moss.com/"
-                  class="external-link button is-normal is-rounded cta-primary">
+                  class="external-link button is-normal is-rounded cta-link">
                   <span class="icon">
                       <i class="fas fa-gamepad"></i>
                   </span>
@@ -167,10 +167,10 @@
   </div>
 </section>
 
-<section class="section tldr-section reveal-section">
+<section class="section tldr-section">
   <div class="container reading-container">
     <div class="columns is-centered has-text-centered">
-      <div class="column tldr-card">
+      <div class="column tldr-content">
 
         <span class="tldr-badge">TL;DR</span>
 
@@ -190,7 +190,7 @@
   </div>
 </section>
 
-<section class="section abstract-section reveal-section">
+<section class="section abstract-section">
   <div class="container reading-container">
     <div class="columns is-centered has-text-centered">
       <div class="column">
@@ -222,7 +222,7 @@
   </div>
 </section>
 
-<section class="section project-section reveal-section">
+<section class="section project-section">
   <div class="container site-container">
 
     <div class="columns feature-layout">
@@ -268,7 +268,7 @@
           decoding="async"
         />
         <p class="content has-text-centered figure-caption">
-          <i>Scientific Judge (small models) outperforms much larger baselines; Scientific Thinker achieves strong win rates.</i>
+          Scientific Judge (small models) outperforms much larger baselines; Scientific Thinker achieves strong win rates.
         </p>
       </div>
 
@@ -278,7 +278,7 @@
 </section>
 
 
-<section class="section project-section project-section-tinted reveal-section">
+<section class="section project-section">
   <div class="container site-container">
 
     <div class="columns feature-layout">
@@ -347,7 +347,7 @@
 
 
 
-<section class="section results-section reveal-section" id="results">
+<section class="section results-section" id="results">
   <div class="container site-container">
 
     <h2 class="title is-3">
@@ -578,7 +578,7 @@
 
 
 
-<section class="section project-section reveal-section">
+<section class="section project-section">
   <div class="container site-container">
 
     <div class="columns feature-layout findings-layout">
@@ -655,13 +655,13 @@
              alt="Scientific Judge accuracy scaling with model size and training data."
              loading="lazy" decoding="async"/>
         <p class="content has-text-centered figure-caption">
-          <i>Scaling trends for scientific judgement across model size and training data.</i>
+          Scaling trends for scientific judgement across model size and training data.
         </p>
         <img src="static/images/thinker_winrate.png" class="research-figure research-figure-narrow"
              alt="Scientific Thinker win rates against strong baseline models."
              loading="lazy" decoding="async"/>
         <p class="content has-text-centered figure-caption">
-          <i>Scientific Thinker win rates after preference alignment.</i>
+          Scientific Thinker win rates after preference alignment.
         </p>
       </div>
 
@@ -671,8 +671,8 @@
 
 
 
-<section class="section citation-section reveal-section" id="citation">
-  <div class="container reading-container content citation-card">
+<section class="section citation-section" id="citation">
+  <div class="container reading-container content citation-content">
     <h2 class="title is-3  has-text-centered">Citation</h2>
     <pre><code>@article{tong2026ai,
   title={AI Can Learn Scientific Taste},
@@ -683,27 +683,6 @@
   </div>
 </section>
 
-
-<footer class="footer site-footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link external-link" target="_blank" rel="noopener noreferrer"
-         aria-label="GitHub repository" href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            Website template borrowed from <a
-              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 </body>
 </html>
