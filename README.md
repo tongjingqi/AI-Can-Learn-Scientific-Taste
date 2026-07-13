@@ -21,6 +21,7 @@ English | [中文](README_zh.md)
 
 ## 🎊 News
 
+- [2026.07] 🤗 The SciJudge-2506 series has been updated on Hugging Face. [[Collection](https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste)]
 - [2026.03] 🎮 Online Demo is now available! [[Demo](https://paperank.open-moss.com/)]
 - [2026.03] 📄 Paper available on arXiv. [[arXiv](https://arxiv.org/abs/2603.14473)]
 - [2026.03] 🤗 Models released on Hugging Face. [[Collection](https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste)]
