@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description"
@@ -12,34 +12,32 @@
         rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script defer src="./static/js/index.js"></script>
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar site-navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+    <button id="navbar-toggle" class="navbar-burger" type="button" aria-label="Open navigation menu"
+            aria-expanded="false" aria-controls="navbar-menu">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
-    </a>
+    </button>
   </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" target="_blank" href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste">
+  <div id="navbar-menu" class="navbar-menu">
+    <div class="navbar-start centered-navbar">
+      <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+         aria-label="GitHub repository" title="GitHub repository"
+         href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste">
       <span class="icon">
-          <i class="fas fa-home"></i>
+          <i class="fab fa-github"></i>
       </span>
       </a>
       <div class="navbar-item has-dropdown is-hoverable">
@@ -47,10 +45,10 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" target="_blank" href="https://thinking-with-video.github.io/">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="https://thinking-with-video.github.io/">
             [CVPR 2026] Thinking with Video
           </a>
-          <a class="navbar-item" target="_blank" href="https://iclr26-game-rl.github.io/">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="https://iclr26-game-rl.github.io/">
             [ICLR 2026] Game-RL
           </a>
         </div>
@@ -60,19 +58,19 @@
   </div>
 </nav>
 
-<section class="hero">
+<section class="hero project-hero">
   <div class="hero-body">
-    <div class="container is-max-desktop">
+    <div class="container hero-container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title">AI Can Learn Scientific Taste</h1>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><a href="https://github.com/tongjingqi/" target="_blank">Jingqi Tong</a><sup>1,2,3,*</sup>,</span>
-            <span class="author-block"><a href="https://www.mubuky.com/" target="_blank">Mingzhe Li</a><sup>1,2,3,*</sup>,</span>
-            <span class="author-block"><a href="https://github.com/lkdhy" target="_blank">Hangcheng Li</a><sup>1,2,3,*</sup>,</span>
-            <span class="author-block"><a href="https://openreview.net/profile?id=%7EYongzhuo_Yang1" target="_blank">Yongzhuo Yang</a><sup>1,3,&ddagger;</sup>,</span>
-            <span class="author-block"><a href="https://github.com/betmma" target="_blank">Yurong Mou</a><sup>1,2,3,&ddagger;</sup>,</span>
+            <span class="author-block"><a href="https://github.com/tongjingqi/" target="_blank" rel="noopener noreferrer">Jingqi Tong</a><sup>1,2,3,*</sup>,</span>
+            <span class="author-block"><a href="https://www.mubuky.com/" target="_blank" rel="noopener noreferrer">Mingzhe Li</a><sup>1,2,3,*</sup>,</span>
+            <span class="author-block"><a href="https://github.com/lkdhy" target="_blank" rel="noopener noreferrer">Hangcheng Li</a><sup>1,2,3,*</sup>,</span>
+            <span class="author-block"><a href="https://openreview.net/profile?id=%7EYongzhuo_Yang1" target="_blank" rel="noopener noreferrer">Yongzhuo Yang</a><sup>1,3,&ddagger;</sup>,</span>
+            <span class="author-block"><a href="https://github.com/betmma" target="_blank" rel="noopener noreferrer">Yurong Mou</a><sup>1,2,3,&ddagger;</sup>,</span>
             <span class="author-block">Weijie Ma<sup>1,2</sup>,</span>
             <span class="author-block">Zhiheng Xi<sup>1</sup>,</span>
             <span class="author-block">Hongji Chen<sup>1,3</sup>,</span>
@@ -89,7 +87,7 @@
             <span class="author-block">Ning Ding<sup>4</sup>,</span>
             <span class="author-block">Xuanjing Huang<sup>1</sup>,</span>
             <span class="author-block">Yugang Jiang<sup>1</sup>,</span>
-            <span class="author-block"><a href="https://xpqiu.github.io/en.html" target="_blank">Xipeng Qiu</a><sup>1,2,3,&dagger;</sup></span>
+            <span class="author-block"><a href="https://xpqiu.github.io/en.html" target="_blank" rel="noopener noreferrer">Xipeng Qiu</a><sup>1,2,3,&dagger;</sup></span>
           </div>
 
           <div class="is-size-6 publication-authors">
@@ -106,8 +104,8 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a target="_blank" href="https://arxiv.org/abs/2603.14473"
-                  class="external-link button is-normal is-rounded is-dark">
+                <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2603.14473"
+                  class="external-link button is-normal is-rounded cta-secondary">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -116,8 +114,8 @@
               </span>
 
               <span class="link-block">
-                <a target="_blank" href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste"
-                  class="external-link button is-normal is-rounded is-dark">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste"
+                  class="external-link button is-normal is-rounded cta-secondary">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
@@ -126,28 +124,28 @@
               </span>
 
               <span class="link-block">
-                <a target="_blank" href="https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste"
-                  class="external-link button is-normal is-rounded is-dark">
+                <a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste"
+                  class="external-link button is-normal is-rounded cta-secondary">
                   <span class="icon">
-                      <img src="static/images/hf-logo.png" alt="HuggingFace" style="height: 1.2em; vertical-align: middle;">
+                      <img src="static/images/hf-logo.png" alt="HuggingFace" class="hf-logo">
                   </span>
                   <span>Models & Datasets</span>
                   </a>
               </span>
 
               <span class="link-block">
-                <a target="_blank" href="https://huggingface.co/papers/2603.14473"
-                  class="external-link button is-normal is-rounded is-dark">
+                <a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/papers/2603.14473"
+                  class="external-link button is-normal is-rounded cta-secondary">
                   <span class="icon">
-                      <img src="static/images/hf-logo.png" alt="HuggingFace" style="height: 1.2em; vertical-align: middle;">
+                      <img src="static/images/hf-logo.png" alt="HuggingFace" class="hf-logo">
                   </span>
                   <span>Daily Paper</span>
                   </a>
               </span>
 
               <span class="link-block">
-                <a target="_blank" href="https://paperank.open-moss.com/"
-                  class="external-link button is-normal is-rounded is-dark">
+                <a target="_blank" rel="noopener noreferrer" href="https://paperank.open-moss.com/"
+                  class="external-link button is-normal is-rounded cta-primary">
                   <span class="icon">
                       <i class="fas fa-gamepad"></i>
                   </span>
@@ -156,7 +154,7 @@
               </span>
             </div>
 
-            <div style="margin-top: 10px;">
+            <div class="paper-award">
               <a href="https://huggingface.co/papers/2603.14473">
                 <img src="assets/huggingface_paper_gold_day.svg" alt="#1 Paper of the Day"/>
               </a>
@@ -169,18 +167,18 @@
   </div>
 </section>
 
-<section class="section" style="padding-top: 0rem">
-  <div class="container is-max-desktop">
+<section class="section tldr-section reveal-section">
+  <div class="container reading-container">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column tldr-card">
 
         <span class="tldr-badge">TL;DR</span>
 
         <div class="content has-text-justified">
-          <p style="font-size: 1.25rem; text-align: center; margin-top: 0.8rem;">
+          <p class="tldr-copy">
             We treat <strong>scientific taste</strong> as a learnable objective and show that
             <br/>
-            <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
+            <span class="highlight highlight-strong">
               Reinforcement Learning from Community Feedback can train models
               <br/>to judge and propose higher-impact scientific ideas.
             </span>
@@ -192,10 +190,10 @@
   </div>
 </section>
 
-<section class="section" style="padding-top: 0rem">
-  <div class="container is-max-wider">
+<section class="section abstract-section reveal-section">
+  <div class="container reading-container">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -224,12 +222,12 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-wider">
+<section class="section project-section reveal-section">
+  <div class="container site-container">
 
-    <div class="columns">
+    <div class="columns feature-layout">
 
-      <div class="column is-5">
+      <div class="column feature-copy">
         <h2 class="title is-3">
           🌏 Why Scientific Taste Matters
         </h2>
@@ -237,21 +235,21 @@
         <div class="content">
           <div class="content">
 
-            <ul>
-              <li style="margin-top: 2rem;">
-                <span style="font-weight: bolder;">Scientific taste is more than execution.</span>
+            <ul class="feature-list">
+              <li>
+                <strong>Scientific taste is more than execution.</strong>
                 AI scientists increasingly help with literature search and experimentation, but choosing which ideas are worth
                 pursuing remains a separate capability.
               </li>
 
-              <li style="margin-top: 2rem;">
-                <span style="font-weight: bolder;">Community feedback provides supervision.</span>
+              <li>
+                <strong>Community feedback provides supervision.</strong>
                 In science, long-term community judgement is reflected in signals such as citations, which can be turned into
                 matched preference data.
               </li>
 
-              <li style="margin-top: 2rem;">
-                <span style="font-weight: bolder;">Taste can be modeled and aligned.</span>
+              <li>
+                <strong>Taste can be modeled and aligned.</strong>
                 Once preference signals are constructed, a model can learn to judge ideas and then be used as a reward model
                 to improve idea generation itself.
               </li>
@@ -261,13 +259,15 @@
         </div>
       </div>
 
-      <div class="column is-7 has-text-centered">
+      <div class="column figure-panel has-text-centered">
         <img
           src="static/images/performance_teaser.png"
-          class="interpolation-image"
-          width="100%"
+          class="research-figure"
+          alt="Performance comparison of Scientific Judge and Scientific Thinker."
+          loading="lazy"
+          decoding="async"
         />
-        <p class="content has-text-centered" style="margin-top: 0.5rem;">
+        <p class="content has-text-centered figure-caption">
           <i>Scientific Judge (small models) outperforms much larger baselines; Scientific Thinker achieves strong win rates.</i>
         </p>
       </div>
@@ -278,12 +278,12 @@
 </section>
 
 
-<section class="section">
-  <div class="container is-max-wider">
+<section class="section project-section project-section-tinted reveal-section">
+  <div class="container site-container">
 
-    <div class="columns">
+    <div class="columns feature-layout">
 
-      <div class="column is-5">
+      <div class="column feature-copy">
         <h2 class="title is-3">
           ⚙️ RLCF Formulation
         </h2>
@@ -295,19 +295,19 @@
         <div class="content">
           <div class="content">
 
-            <ul>
-              <li style="margin-top: 1rem;">
-                <span style="font-weight: bolder;">Construct community preference.</span>
+            <ul class="feature-list compact-feature-list">
+              <li>
+                <strong>Construct community preference.</strong>
                 We pair papers from the same field and publication period, then label the higher-citation paper as preferred.
               </li>
 
-              <li style="margin-top: 1rem;">
-                <span style="font-weight: bolder;">Train Scientific Judge.</span>
+              <li>
+                <strong>Train Scientific Judge.</strong>
                 A generative reward model reasons over a pair of papers and predicts which one is more likely to have higher impact.
               </li>
 
-              <li style="margin-top: 1rem;">
-                <span style="font-weight: bolder;">Train Scientific Thinker.</span>
+              <li>
+                <strong>Train Scientific Thinker.</strong>
                 Using Scientific Judge as the reward model, a policy model learns to propose follow-up research ideas with higher
                 potential impact through comparison-based GRPO.
               </li>
@@ -318,11 +318,13 @@
 
       </div>
 
-      <div class="column is-7 has-text-centered">
+      <div class="column figure-panel has-text-centered">
         <img
           src="static/images/formulation.png"
-          class="interpolation-image"
-          width="100%"
+          class="research-figure"
+          alt="RLCF pipeline from community preference construction to Scientific Judge and Scientific Thinker training."
+          loading="lazy"
+          decoding="async"
         />
       </div>
 
@@ -335,8 +337,8 @@
       <p class="hypothesis-text">
         Scientific taste is not mystical or purely subjective.
         Large-scale community feedback can be converted into matched preferences that enable models to
-        learn <span style="color: hsl(204, 86%, 53%);">scientific judgement</span> and improve
-        <span style="color: hsl(204, 86%, 53%);">scientific ideation</span>.
+        learn <span class="highlight">scientific judgement</span> and improve
+        <span class="highlight">scientific ideation</span>.
       </p>
 
     </div>
@@ -345,37 +347,37 @@
 
 
 
-<section class="section" id="results">
-  <div class="container is-max-wider">
+<section class="section results-section reveal-section" id="results">
+  <div class="container site-container">
 
     <h2 class="title is-3">
       🏆 SciJudgeBench and Main Results
     </h2>
 
-    <div class="content">
+    <div class="content section-intro">
       <p>
-        <span style="color: hsl(204, 86%, 53%);">SciJudgeBench</span> is built from 2.1M arXiv papers published through 2024,
+        <span class="highlight">SciJudgeBench</span> is built from 2.1M arXiv papers published through 2024,
         producing 696,758 field- and time-matched citation-based preference pairs.
         We evaluate across three settings:
       </p>
 
       <ul>
         <li>
-          <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
+          <span class="highlight highlight-strong">
             In-domain scientific judgement
           </span>:
           paired paper preference prediction across Computer Science, Mathematics, Physics, and Other fields.
         </li>
 
         <li>
-          <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
+          <span class="highlight highlight-strong">
             Generalization settings
           </span>:
           future-year papers, ICLR peer-review preference, and bioRxiv biology transfer.
         </li>
 
         <li>
-          <span style="color: hsl(204, 86%, 53%); font-weight: bolder;">
+          <span class="highlight highlight-strong">
             Ideation evaluation
           </span>:
           pairwise win-rate comparisons for Scientific Thinker against its base policy and strong proprietary models.
@@ -387,90 +389,22 @@
       Leaderboard
     </h3>
 
-    <p class="content has-text-centered">
-      <strong style="font-size: larger;">
+    <div class="table-block">
+    <p class="content has-text-centered table-heading">
+      <strong>
         🏆 Scientific Judge on SciJudgeBench and OOD Settings
       </strong>
     </p>
 
-    <p class="content has-text-centered">
+    <p class="content has-text-centered table-note">
       <i>
         We report pairwise accuracy with position-swap consistency on in-domain and out-of-domain evaluations.
       </i>
     </p>
 
-    <style>
-      .table-wrapper {
-        overflow-x: auto;
-        margin: 2rem 0;
-      }
-
-      .web-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-        font-size: 15px;
-        background: #fff;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      }
-
-      .web-table th,
-      .web-table td {
-        padding: 12px 14px;
-        text-align: center;
-        border-bottom: 1px solid #eee;
-        white-space: nowrap;
-      }
-
-      .web-table th {
-        background: #f7f9fc;
-        font-weight: 600;
-        color: #333;
-      }
-
-      .web-table td:first-child,
-      .web-table th:first-child {
-        text-align: left;
-        font-weight: 500;
-      }
-
-      .web-table > thead > tr > th,
-      .web-table > tbody > tr > td {
-        text-align: center;
-      }
-
-      .web-table > thead > tr > th:first-child,
-      .web-table > tbody > tr > td:first-child {
-        text-align: left;
-      }
-
-      .web-table tbody tr:hover {
-        background: #f5faff;
-      }
-
-      .group-row td {
-        background: #f0f4f8;
-        font-weight: 600;
-        color: #444;
-        text-align: center !important;
-      }
-
-      .best {
-        color: #3273dc;
-        font-weight: 700;
-      }
-
-      .second {
-        color: #555;
-        text-decoration: underline;
-        text-underline-offset: 3px;
-      }
-    </style>
-
-
-    <div class="table-wrapper">
+    <p class="table-scroll-hint">Swipe or scroll horizontally to view all metrics →</p>
+    <div class="table-scroll-shell">
+    <div class="table-wrapper" role="region" aria-label="Scientific Judge results table" tabindex="0">
     <table class="web-table">
 
       <thead>
@@ -565,13 +499,18 @@
 
     </table>
     </div>
+    </div>
+    </div>
 
-    <div class="table-wrapper">
+    <div class="table-block">
 
-    <p class="content has-text-centered">
-      <strong style="font-size: larger; margin-bottom: 0.5rem;">🏆 Scientific Thinker Win Rates Against Strong Models</strong>
+    <p class="content has-text-centered table-heading">
+      <strong>🏆 Scientific Thinker Win Rates Against Strong Models</strong>
     </p>
 
+    <p class="table-scroll-hint">Swipe or scroll horizontally to view all metrics →</p>
+    <div class="table-scroll-shell">
+    <div class="table-wrapper" role="region" aria-label="Scientific Thinker win-rate table" tabindex="0">
     <table class="web-table">
 
       <thead>
@@ -630,6 +569,8 @@
 
     </table>
     </div>
+    </div>
+    </div>
 
 
   </div>
@@ -637,12 +578,12 @@
 
 
 
-<section class="section">
-  <div class="container is-max-wider">
+<section class="section project-section reveal-section">
+  <div class="container site-container">
 
-    <div class="columns">
+    <div class="columns feature-layout findings-layout">
 
-      <div class="column is-5">
+      <div class="column feature-copy">
         <h2 class="title is-3">
           🧪 Key Findings
         </h2>
@@ -654,14 +595,14 @@
         <div class="content">
           <div class="content">
 
-            <ul>
-              <li style="margin-top: 1rem;">
-                <span style="font-weight: bolder;">Preference modeling</span>:
+            <ul class="feature-list compact-feature-list">
+              <li>
+                <strong>Preference modeling</strong>:
                 Scientific Judge is trained with GRPO on citation-based pairwise supervision and evaluated with position-swap consistency.
               </li>
 
-              <li style="margin-top: 1rem;">
-                <span style="font-weight: bolder;">Preference alignment</span>:
+              <li>
+                <strong>Preference alignment</strong>:
                 Scientific Thinker is trained with comparison-based GRPO using Scientific Judge as the reward model.
               </li>
             </ul>
@@ -709,13 +650,17 @@
 
       </div>
 
-      <div class="column is-7 has-text-centered">
-        <img src="static/images/scaling_curve.png" class="interpolation-image" style="margin-top:5rem;" width="100%"/>
-        <p class="content has-text-centered">
+      <div class="column figure-panel figure-stack has-text-centered">
+        <img src="static/images/scaling_curve.png" class="research-figure"
+             alt="Scientific Judge accuracy scaling with model size and training data."
+             loading="lazy" decoding="async"/>
+        <p class="content has-text-centered figure-caption">
           <i>Scaling trends for scientific judgement across model size and training data.</i>
         </p>
-        <img src="static/images/thinker_winrate.png" class="interpolation-image" style="margin-top:20px;" width="60%"/>
-        <p class="content has-text-centered">
+        <img src="static/images/thinker_winrate.png" class="research-figure research-figure-narrow"
+             alt="Scientific Thinker win rates against strong baseline models."
+             loading="lazy" decoding="async"/>
+        <p class="content has-text-centered figure-caption">
           <i>Scientific Thinker win rates after preference alignment.</i>
         </p>
       </div>
@@ -726,8 +671,8 @@
 
 
 
-<section class="section" id="citation">
-  <div class="container is-max-desktop content">
+<section class="section citation-section reveal-section" id="citation">
+  <div class="container reading-container content citation-card">
     <h2 class="title is-3  has-text-centered">Citation</h2>
     <pre><code>@article{tong2026ai,
   title={AI Can Learn Scientific Taste},
@@ -739,10 +684,11 @@
 </section>
 
 
-<footer class="footer">
+<footer class="footer site-footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link" href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste" class="external-link">
+      <a class="icon-link external-link" target="_blank" rel="noopener noreferrer"
+         aria-label="GitHub repository" href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste">
         <i class="fab fa-github"></i>
       </a>
     </div>
