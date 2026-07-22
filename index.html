@@ -197,24 +197,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Great scientists have strong judgement and foresight, closely tied to what we call scientific taste.
-            Here, we use the term to refer to the capacity to judge and propose research ideas with high potential impact.
-            However, most related research focuses on improving an AI scientist's executive capability, while enhancing
-            an AI's scientific taste remains underexplored.
+            Scientific discovery depends on expert judgement and foresight, which we call scientific taste: the ability
+            to judge and propose research ideas with potential for long-term scientific impact.
           </p>
           <p>
-            We propose <b>Reinforcement Learning from Community Feedback (RLCF)</b>, a training paradigm that uses
-            large-scale community signals as supervision and formulates scientific taste learning as a preference modeling
-            and alignment problem. For preference modeling, we train <b>Scientific Judge</b> on 720K field- and time-matched
-            pairs of high- vs. low-citation papers. For preference alignment, using Scientific Judge as a reward model,
-            we train <b>Scientific Thinker</b> to propose research ideas with high potential impact.
+            Whether AI can learn this ability remains an open question. Here we provide evidence that artificial
+            intelligence can learn judgement and ideation.
           </p>
           <p>
-            Experiments show that the 30B Scientific Judge variant outperforms strong LLM baselines such as GPT-5.4 Thinking,
-            while Scientific Judge generalizes across the future-year test set, unseen fields, and other community metrics.
-            Scientific Thinker further proposes research ideas with higher potential impact than strong baselines. These
-            results suggest that AI can learn scientific taste, marking an important step towards AI systems that could help
-            accelerate scientific discovery.
+            We introduce Reinforcement Learning from Community Feedback (RLCF), a training paradigm that uses large-scale
+            signals from the scientific community as supervision. We first train Scientific Judge on field- and time-matched
+            pairs of high- vs. low-citation papers to judge ideas. We then train a Scientific Thinker to propose research
+            ideas with high potential impact.
+          </p>
+          <p>
+            Experiments show that the 30B Scientific Judge variant outperforms strong LLM baselines (e.g., GPT-5.4 Thinking),
+            while Scientific Judge generalizes across future-year papers, unseen fields, and other community metrics.
+            Furthermore, Scientific Thinker proposes research ideas with higher potential impact than baselines. These results
+            suggest that AI can learn scientific taste, marking an important step towards AI systems that could help accelerate
+            scientific discovery.
           </p>
         </div>
       </div>
@@ -446,11 +447,11 @@
         </tr>
 
         <tr>
-          <td>SciJudge-Qwen3-4B</td>
-          <td>77.3</td>
-          <td>80.9</td>
-          <td>79.4</td>
-          <td>56.3</td>
+          <td class="best">SciJudge-Qwen3-4B</td>
+          <td class="best">77.3</td>
+          <td class="best">80.9</td>
+          <td class="best">79.4</td>
+          <td class="best">56.3</td>
         </tr>
 
         <tr>
