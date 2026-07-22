@@ -86,7 +86,7 @@
             <span class="author-block">Jun Zhao<sup>1,&dagger;</sup>,</span>
             <span class="author-block">Ning Ding<sup>4</sup>,</span>
             <span class="author-block">Xuanjing Huang<sup>1</sup>,</span>
-            <span class="author-block">Yugang Jiang<sup>1</sup>,</span>
+            <span class="author-block">Yu-Gang Jiang<sup>1</sup>,</span>
             <span class="author-block"><a href="https://xpqiu.github.io/en.html" target="_blank" rel="noopener noreferrer">Xipeng Qiu</a><sup>1,2,3,&dagger;</sup></span>
           </div>
 
@@ -205,7 +205,7 @@
           <p>
             We propose <b>Reinforcement Learning from Community Feedback (RLCF)</b>, a training paradigm that uses
             large-scale community signals as supervision and formulates scientific taste learning as a preference modeling
-            and alignment problem. For preference modeling, we train <b>Scientific Judge</b> on 700K field- and time-matched
+            and alignment problem. For preference modeling, we train <b>Scientific Judge</b> on 720K field- and time-matched
             pairs of high- vs. low-citation papers. For preference alignment, using Scientific Judge as a reward model,
             we train <b>Scientific Thinker</b> to propose research ideas with high potential impact.
           </p>
@@ -357,7 +357,7 @@
     <div class="content section-intro">
       <p>
         <span class="highlight">SciJudgeBench</span> is built from 2.1M arXiv papers published through 2024,
-        producing 696,758 field- and time-matched citation-based preference pairs.
+        producing 720,341 field- and time-matched citation-based preference pairs.
         We evaluate across three settings:
       </p>
 
@@ -399,6 +399,7 @@
     <p class="content has-text-centered table-note">
       <i>
         We report pairwise accuracy with position-swap consistency on in-domain and out-of-domain evaluations.
+        The Future-Year column uses 904 pairs from papers published in 2025.
       </i>
     </p>
 
@@ -426,7 +427,7 @@
         <tr>
           <td>Qwen3-4B-Instruct</td>
           <td>58.1</td>
-          <td>68.1</td>
+          <td>64.7</td>
           <td>65.3</td>
           <td>53.1</td>
         </tr>
@@ -434,7 +435,7 @@
         <tr>
           <td>Qwen3-30B-A3B-Instruct</td>
           <td>69.7</td>
-          <td>71.6</td>
+          <td>71.7</td>
           <td>76.8</td>
           <td>65.0</td>
         </tr>
@@ -446,7 +447,7 @@
         <tr>
           <td>SciJudge-Qwen3-4B</td>
           <td>77.3</td>
-          <td>82.1</td>
+          <td>80.9</td>
           <td>79.4</td>
           <td>56.3</td>
         </tr>
@@ -454,7 +455,7 @@
         <tr>
           <td class="best">SciJudge-Qwen3-30B</td>
           <td class="best">82.7</td>
-          <td class="best">87.0</td>
+          <td class="best">83.1</td>
           <td class="best">88.5</td>
           <td class="best">70.6</td>
         </tr>
