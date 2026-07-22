@@ -21,6 +21,7 @@ English | [中文](README_zh.md)
 
 ## 🎊 News
 
+- [2026.07] 📊 The 2025 Future-Year benchmark and evaluation results have been refreshed (904 pairs).
 - [2026.07] 🤗 The SciJudge-2506 series has been updated on Hugging Face. [[Collection](https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste)]
 - [2026.03] 🎮 Online Demo is now available! [[Demo](https://paperank.open-moss.com/)]
 - [2026.03] 📄 Paper available on arXiv. [[arXiv](https://arxiv.org/abs/2603.14473)]
@@ -41,7 +42,7 @@ Great scientists have strong judgement and foresight, closely tied to what we ca
 
 We propose **Reinforcement Learning from Community Feedback (RLCF)**, a training paradigm that uses large-scale community signals as supervision and formulates scientific taste learning as a preference modeling and alignment problem.
 
-To make this possible, we construct **SciJudgeBench**, a large-scale benchmark of **696,758** field- and time-matched paper pairs derived from **2.1M** arXiv papers published through 2024. We then train:
+To make this possible, we construct **SciJudgeBench**, a large-scale benchmark of **720,341** field- and time-matched paper pairs derived from **2.1M** arXiv papers published through 2024. We then train:
 
 - **Scientific Judge**: a generative reward model that predicts which paper in a pair is more likely to have higher impact.
 - **Scientific Thinker**: a policy model that proposes follow-up research ideas with higher potential impact.
@@ -66,7 +67,7 @@ RLCF consists of three stages:
 ### Scientific Judge
 
 - A generative reward model that reasons over paired paper abstracts and predicts which has higher potential impact.
-- Trained with GRPO on 696K field- and time-matched citation-based preference pairs.
+- Trained with GRPO on 720K field- and time-matched citation-based preference pairs.
 - Serves both as an evaluator of research ideas and as the reward model for Scientific Thinker training.
 
 ### Scientific Thinker
@@ -77,18 +78,19 @@ RLCF consists of three stages:
 
 ### SciJudgeBench
 
-- **696,758** preference pairs and roughly **1.4M** unique papers.
+- **720,341** preference pairs and **1,440,682** pair-level paper records; papers may recur across pairs, so this is not a unique-paper count.
 - Built from arXiv papers across **Computer Science**, **Mathematics**, **Physics**, and **Other** scientific fields.
-- Evaluated on three main settings: **in-domain**, **temporal OOD** (future-year papers), and **metric OOD** (ICLR peer review), plus **bioRxiv** as an additional cross-field evaluation.
+- Evaluated in-domain and across **temporal OOD** (904 pairs from papers published in 2025), **metric OOD** (ICLR peer review and Altmetric attention), field-transfer, and controlled-comparison settings, with **bioRxiv** as an additional biology evaluation.
 
 ## 📈 Key Results
 
 Our paper shows that scientific taste can be learned and transferred:
 
 - **Scientific judgement scales** with both data size and model size.
-- **Scientific Judge-Qwen3-30B surpasses GPT-5.2, GLM-5, and Gemini 3 Pro** on in-domain evaluation (80.6 vs. 75.7 for the best baseline), and generalizes to future-year papers (+55.1 points over base) and ICLR peer-review preference.
-- **Learned judgement generalizes** across time, across fields (bioRxiv), and from citations to peer-review preferences.
-- **Scientific Thinker achieves 54.2% average win-rate** against GPT-5.2, GLM-5, and Gemini 3 Pro, strongly outperforming its base policy (30.3%) on both in-domain and out-of-domain settings.
+- **Scientific Judge-Qwen3-30B reaches 82.7% in-domain accuracy**, surpassing all listed strong LLM baselines, including GPT-5.4 Thinking at 81.6%.
+- **Learned judgement transfers to future-year papers:** on the refreshed 904-pair test set from papers published in 2025, Qwen3-4B improves from 64.7% to 80.9% (+16.2 points), and Qwen3-30B-A3B improves from 71.7% to 83.1% (+11.4 points).
+- **Learned judgement generalizes** across fields and community metrics, including bioRxiv biology transfer, ICLR peer-review preferences, and Altmetric attention, while its gains persist under author/institution and topic controls.
+- **Scientific Thinker achieves a 54.2% average win rate** against three strong LLM baselines in both in-domain and out-of-domain settings, compared with 30.3% and 27.8% for its base policy, respectively.
 
 <div align="center">
   <img src="assets/performance_teaser.png" width="100%" alt="Main performance results" />
@@ -110,5 +112,3 @@ If you find our work helpful, please consider citing:
 ## ⚖️ License
 
 This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
-
-> **Note:** The currently released training and test sets are updated versions with improved data quality. This update does not affect the experimental conclusions reported in the paper. The results in the paper were based on earlier versions of the data; updated results on the new data will be released soon. Additionally, larger models with newer architectures (Qwen3.5 series) are still under training — stay tuned!

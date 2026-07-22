@@ -21,6 +21,7 @@
 
 ## 🎊 最新动态
 
+- [2026.07] 📊 已更新 2025 年 Future-Year 基准与评估结果（904 对）。
 - [2026.07] 🤗 SciJudge-2506 系列已在 Hugging Face 更新。[[Collection](https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste)]
 - [2026.03] 🎮 在线 Demo 现已上线！[[Demo](https://paperank.open-moss.com/)]
 - [2026.03] 📄 论文已发布在 arXiv 上。[[arXiv](https://arxiv.org/abs/2603.14473)]
@@ -41,7 +42,7 @@
 
 我们提出了**基于社区反馈的强化学习（RLCF）**，这是一种利用大规模社区信号作为监督的训练范式，将科研品味的学习建模为偏好建模与对齐问题。
 
-为此，我们构建了 **SciJudgeBench**，一个包含 **696,758** 个领域和时间匹配论文对的大规模基准，来源于截至 2024 年发表的 **210 万**篇 arXiv 论文。我们在此基础上训练了：
+为此，我们构建了 **SciJudgeBench**，一个包含 **720,341** 个领域和时间匹配论文对的大规模基准，来源于截至 2024 年发表的 **210 万** 篇 arXiv 论文。我们在此基础上训练了：
 
 - **Scientific Judge**：一个生成式奖励模型，预测论文对中哪篇更可能产生更高影响力。
 - **Scientific Thinker**：一个策略模型，提出更具潜在影响力的后续研究想法。
@@ -66,7 +67,7 @@ RLCF 包含三个阶段：
 ### Scientific Judge
 
 - 一个生成式奖励模型，对配对论文摘要进行推理，预测哪篇具有更高的潜在影响力。
-- 使用 GRPO 在 696K 个领域和时间匹配的基于引用的偏好对上训练。
+- 使用 GRPO 在 720K 个领域和时间匹配的基于引用的偏好对上训练。
 - 既可作为研究想法的评估器，也可作为 Scientific Thinker 训练的奖励模型。
 
 ### Scientific Thinker
@@ -77,18 +78,19 @@ RLCF 包含三个阶段：
 
 ### SciJudgeBench
 
-- **696,758** 个偏好对，约 **140 万**篇独立论文。
+- **720,341** 个偏好对，对应 **1,440,682** 条配对层面的论文记录；同一论文可能出现在多个配对中，因此这不是独立论文数量。
 - 来源于**计算机科学**、**数学**、**物理**及**其他**科学领域的 arXiv 论文。
-- 在三种主要设置下评估：**域内**、**时间 OOD**（未来年份论文）和**指标 OOD**（ICLR 同行评审），另加 **bioRxiv** 作为跨领域补充评估。
+- 在域内、**时间 OOD**（来自 2025 年论文的 904 对）、**指标 OOD**（ICLR 同行评审分数与 Altmetric 注意力分数）、跨领域迁移及受控比较等设置下评估，另以 **bioRxiv** 作为补充生物学评估。
 
 ## 📈 主要结果
 
 我们的论文表明，科研品味可以被学习和迁移：
 
 - **科学判断力随数据规模和模型规模增长**而提升。
-- **Scientific Judge-Qwen3-30B 超越了 GPT-5.2、GLM-5 和 Gemini 3 Pro**，在域内评估中达到 80.6（最佳基线为 75.7），并泛化至未来年份论文（相对基座模型 +55.1）和 ICLR 同行评审偏好。
-- **习得的判断力可以泛化**——跨时间、跨领域（bioRxiv），从引用偏好到同行评审偏好。
-- **Scientific Thinker 达到 54.2% 的平均胜率**，超越 GPT-5.2、GLM-5 和 Gemini 3 Pro，大幅优于其基座策略模型（30.3%），在域内和域外设置上均表现出色。
+- **Scientific Judge-Qwen3-30B 的域内准确率达到 82.7%**，超过所有列出的强 LLM 基线，其中 GPT-5.4 Thinking 为 81.6%。
+- **习得的判断力可迁移至未来年份论文：**在由 2025 年论文构成、更新后的 904 对测试集上，Qwen3-4B 从 64.7% 提升至 80.9%（+16.2 个百分点），Qwen3-30B-A3B 从 71.7% 提升至 83.1%（+11.4 个百分点）。
+- **习得的判断力可跨领域和社区指标泛化**，包括 bioRxiv 生物学迁移、ICLR 同行评审偏好和 Altmetric 注意力；其增益在作者/机构及主题受控比较中仍然保持。
+- **Scientific Thinker 在域内和域外设置中，对三个强 LLM 基线的平均胜率均达到 54.2%**，其基座策略模型的对应结果分别为 30.3% 和 27.8%。
 
 <div align="center">
   <img src="assets/performance_teaser.png" width="100%" alt="主要性能结果" />
@@ -101,7 +103,7 @@ RLCF 包含三个阶段：
 ```bibtex
 @misc{tong2026ailearnscientifictaste,
     title={AI Can Learn Scientific Taste},
-    author={Jingqi Tong and Mingzhe Li and Hangcheng Li and Yongzhuo Yang and Yurong Mou and Weijie Ma and Zhiheng Xi and Hongji Chen and Xiaoran Liu and Qinyuan Cheng and Ming Zhang and Qiguang Chen and Weifeng Ge and Qipeng Guo and Tianlei Ying and Tianxiang Sun and Yining Zheng and Xinchi Chen and Jun Zhao and Ning Ding and Xuanjing Huang and Yugang Jiang and Xipeng Qiu},
+    author={Jingqi Tong and Mingzhe Li and Hangcheng Li and Yongzhuo Yang and Yurong Mou and Weijie Ma and Zhiheng Xi and Hongji Chen and Xiaoran Liu and Qinyuan Cheng and Ming Zhang and Qiguang Chen and Weifeng Ge and Qipeng Guo and Tianlei Ying and Tianxiang Sun and Yining Zheng and Xinchi Chen and Jun Zhao and Ning Ding and Xuanjing Huang and Yu-Gang Jiang and Xipeng Qiu},
     year={2026},
     eprint={2603.14473},
     archivePrefix={arXiv},
@@ -113,5 +115,3 @@ RLCF 包含三个阶段：
 ## ⚖️ 许可证
 
 本项目采用 Apache License 2.0 许可证。详见 [LICENSE](LICENSE)。
-
-> **注意：** 目前发布的训练集与测试集为更新版本，数据质量有所提升，但不影响论文中的实验结论。论文中的实验结果基于先前版本的数据，新数据对应的结果将尽快更新。此外，更大尺寸和更新架构（Qwen3.5 系列）的模型仍在训练中，敬请期待！
