@@ -8,11 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Can Learn Scientific Taste</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap"
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans&display=swap"
         rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
@@ -40,11 +39,11 @@
           <i class="fab fa-github"></i>
       </span>
       </a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
+      <div id="research-navigation" class="navbar-item has-dropdown">
+        <button id="research-toggle" class="navbar-link" type="button" aria-expanded="false" aria-controls="research-menu">
           More Research
-        </a>
-        <div class="navbar-dropdown">
+        </button>
+        <div id="research-menu" class="navbar-dropdown">
           <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="https://thinking-with-video.github.io/">
             [CVPR 2026] Thinking with Video
           </a>
@@ -58,9 +57,10 @@
   </div>
 </nav>
 
-<section class="hero project-hero">
+<!-- Header and abstract restore the shared template from 772d60c. -->
+<section class="hero publication-header">
   <div class="hero-body">
-    <div class="container hero-container">
+    <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title">AI Can Learn Scientific Taste</h1>
@@ -105,7 +105,7 @@
             <div class="publication-links">
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2603.14473"
-                  class="external-link button is-normal is-rounded cta-link">
+                  class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -115,7 +115,7 @@
 
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/tongjingqi/AI-Can-Learn-Scientific-Taste"
-                  class="external-link button is-normal is-rounded cta-link">
+                  class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
@@ -125,7 +125,7 @@
 
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/collections/OpenMOSS-Team/ai-can-learn-scientific-taste"
-                  class="external-link button is-normal is-rounded cta-link">
+                  class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <img src="static/images/hf-logo.png" alt="HuggingFace" class="hf-logo">
                   </span>
@@ -135,7 +135,7 @@
 
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/papers/2603.14473"
-                  class="external-link button is-normal is-rounded cta-link">
+                  class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <img src="static/images/hf-logo.png" alt="HuggingFace" class="hf-logo">
                   </span>
@@ -145,7 +145,7 @@
 
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://paperank.open-moss.com/"
-                  class="external-link button is-normal is-rounded cta-link">
+                  class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-gamepad"></i>
                   </span>
@@ -168,9 +168,9 @@
 </section>
 
 <section class="section tldr-section">
-  <div class="container reading-container">
+  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column tldr-content">
+      <div class="column is-four-fifths tldr-content">
 
         <span class="tldr-badge">TL;DR</span>
 
@@ -190,27 +190,22 @@
   </div>
 </section>
 
-<section class="section abstract-section">
-  <div class="container reading-container">
+<main>
+<section class="section abstract-section" id="abstract" aria-labelledby="abstract-title">
+  <div class="container is-max-wider">
     <div class="columns is-centered has-text-centered">
-      <div class="column">
-        <h2 class="title is-3">Abstract</h2>
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="abstract-title">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Scientific discovery depends on expert judgement and foresight, which we call scientific taste: the ability
             to judge and propose research ideas with potential for long-term scientific impact.
-          </p>
-          <p>
             Whether AI can learn this ability remains an open question. Here we provide evidence that artificial
             intelligence can learn judgement and ideation.
-          </p>
-          <p>
             We introduce Reinforcement Learning from Community Feedback (RLCF), a training paradigm that uses large-scale
             signals from the scientific community as supervision. We first train Scientific Judge on field- and time-matched
             pairs of high- vs. low-citation papers to judge ideas. We then train a Scientific Thinker to propose research
             ideas with high potential impact.
-          </p>
-          <p>
             Experiments show that the 30B Scientific Judge variant outperforms strong LLM baselines (e.g., GPT-5.4 Thinking),
             while Scientific Judge generalizes across future-year papers, unseen fields, and other community metrics.
             Furthermore, Scientific Thinker proposes research ideas with higher potential impact than baselines. These results
@@ -224,20 +219,14 @@
   </div>
 </section>
 
-<section class="section project-section">
+<section class="section research-section overview-section" id="motivation" aria-labelledby="motivation-title">
   <div class="container site-container">
-
-    <div class="columns feature-layout">
-
-      <div class="column feature-copy">
-        <h2 class="title is-3">
+        <h2 class="title is-3 section-title" id="motivation-title">
           🌏 Why Scientific Taste Matters
         </h2>
 
         <div class="content">
-          <div class="content">
-
-            <ul class="feature-list">
+            <ul class="insight-grid">
               <li>
                 <strong>Scientific taste is more than execution.</strong>
                 AI scientists increasingly help with literature search and experimentation, but choosing which ideas are worth
@@ -257,47 +246,41 @@
               </li>
             </ul>
 
-          </div>
         </div>
-      </div>
 
-      <div class="column figure-panel has-text-centered">
+      <figure class="research-figure figure-wide">
+        <a class="figure-link" href="static/images/performance_teaser.png" target="_blank" rel="noopener noreferrer"
+           aria-label="Open performance comparison at full size">
         <img
           src="static/images/performance_teaser.png"
-          class="research-figure"
+          width="2797" height="1100"
           alt="Performance comparison of Scientific Judge and Scientific Thinker."
           loading="lazy"
           decoding="async"
         />
-        <p class="content has-text-centered figure-caption">
-          Scientific Judge (small models) outperforms much larger baselines; Scientific Thinker achieves strong win rates.
-        </p>
-      </div>
-
-    </div>
+        </a>
+        <figcaption class="figure-caption">
+          <span>Scientific Judge (small models) outperforms much larger baselines; Scientific Thinker achieves strong win rates.</span>
+          <a href="static/images/performance_teaser.png" target="_blank" rel="noopener noreferrer" aria-label="View performance comparison at full size">View full size ↗</a>
+        </figcaption>
+      </figure>
 
   </div>
 </section>
 
 
-<section class="section project-section">
+<section class="section research-section method-section" id="method" aria-labelledby="method-title">
   <div class="container site-container">
-
-    <div class="columns feature-layout">
-
-      <div class="column feature-copy">
-        <h2 class="title is-3">
+        <h2 class="title is-3 section-title" id="method-title">
           ⚙️ RLCF Formulation
         </h2>
 
-        <h3 class="title is-4">
+        <h3 class="title is-4 subsection-title">
           Pipeline
         </h3>
 
         <div class="content">
-          <div class="content">
-
-            <ul class="feature-list compact-feature-list">
+            <ol class="pipeline-steps">
               <li>
                 <strong>Construct community preference.</strong>
                 We pair papers from the same field and publication period, then label the higher-citation paper as preferred.
@@ -313,24 +296,24 @@
                 Using Scientific Judge as the reward model, a policy model learns to propose follow-up research ideas with higher
                 potential impact through comparison-based GRPO.
               </li>
-            </ul>
-
-          </div>
+            </ol>
         </div>
 
-      </div>
-
-      <div class="column figure-panel has-text-centered">
+      <figure class="research-figure figure-wide">
+        <a class="figure-link" href="static/images/formulation.png" target="_blank" rel="noopener noreferrer"
+           aria-label="Open the RLCF training pipeline at full size">
         <img
           src="static/images/formulation.png"
-          class="research-figure"
+          width="2284" height="951"
           alt="RLCF pipeline from community preference construction to Scientific Judge and Scientific Thinker training."
           loading="lazy"
           decoding="async"
         />
-      </div>
-
-    </div>
+        </a>
+        <figcaption class="figure-caption figure-caption-action">
+          <a href="static/images/formulation.png" target="_blank" rel="noopener noreferrer" aria-label="View the RLCF training pipeline at full size">View full size ↗</a>
+        </figcaption>
+      </figure>
     <div class="content hypothesis-box">
       <p class="hypothesis-title">
         The Core Thesis
@@ -349,10 +332,10 @@
 
 
 
-<section class="section results-section" id="results">
+<section class="section research-section results-section" id="results" aria-labelledby="results-title">
   <div class="container site-container">
 
-    <h2 class="title is-3">
+    <h2 class="title is-3 section-title" id="results-title">
       🏆 SciJudgeBench and Main Results
     </h2>
 
@@ -581,24 +564,18 @@
 
 
 
-<section class="section project-section">
+<section class="section research-section findings-section" id="findings" aria-labelledby="findings-title">
   <div class="container site-container">
-
-    <div class="columns feature-layout findings-layout">
-
-      <div class="column feature-copy">
-        <h2 class="title is-3">
+        <h2 class="title is-3 section-title" id="findings-title">
           🧪 Key Findings
         </h2>
 
-        <h3 class="title is-4">
+        <h3 class="title is-4 subsection-title">
           Settings
         </h3>
 
         <div class="content">
-          <div class="content">
-
-            <ul class="feature-list compact-feature-list">
+            <ul class="settings-grid">
               <li>
                 <strong>Preference modeling</strong>:
                 Scientific Judge is trained with GRPO on citation-based pairwise supervision and evaluated with position-swap consistency.
@@ -609,17 +586,14 @@
                 Scientific Thinker is trained with comparison-based GRPO using Scientific Judge as the reward model.
               </li>
             </ul>
-          </div>
         </div>
 
-        <h3 class="title is-4">
+        <h3 class="title is-4 subsection-title">
           Results
         </h3>
 
-
-        <div class="content hypothesis-box">
-
-          <ol class="finding-list">
+        <div class="content">
+          <ol class="finding-list finding-grid">
 
             <li>
               <b>Scientific judgement scales with both data and model size.</b>
@@ -635,7 +609,25 @@
               <b>Learned judgement transfers across fields and metrics.</b>
               Gains persist on bioRxiv biology papers and on ICLR peer-review preference.
             </li>
+          </ol>
+        </div>
 
+        <figure class="research-figure figure-wide scaling-figure">
+          <a class="figure-link" href="static/images/scaling_curve.png" target="_blank" rel="noopener noreferrer"
+             aria-label="Open Scientific Judge scaling curves at full size">
+            <img src="static/images/scaling_curve.png" width="2460" height="511"
+                 alt="Scientific Judge accuracy scaling with model size and training data."
+                 loading="lazy" decoding="async"/>
+          </a>
+          <figcaption class="figure-caption">
+            <span>Scaling trends for scientific judgement across model size and training data.</span>
+            <a href="static/images/scaling_curve.png" target="_blank" rel="noopener noreferrer" aria-label="View Scientific Judge scaling curves at full size">View full size ↗</a>
+          </figcaption>
+        </figure>
+
+        <div class="ideation-layout">
+        <div class="content">
+          <ol class="finding-list" start="4">
             <li>
               <b>Scientific Thinker improves ideation quality.</b>
               The trained policy model strongly outperforms its base policy on both in-domain and out-of-domain settings.
@@ -647,35 +639,27 @@
             </li>
 
           </ol>
-
         </div>
-
-
-      </div>
-
-      <div class="column figure-panel figure-stack has-text-centered">
-        <img src="static/images/scaling_curve.png" class="research-figure"
-             alt="Scientific Judge accuracy scaling with model size and training data."
-             loading="lazy" decoding="async"/>
-        <p class="content has-text-centered figure-caption">
-          Scaling trends for scientific judgement across model size and training data.
-        </p>
-        <img src="static/images/thinker_winrate.png" class="research-figure research-figure-narrow"
-             alt="Scientific Thinker win rates against strong baseline models."
-             loading="lazy" decoding="async"/>
-        <p class="content has-text-centered figure-caption">
-          Scientific Thinker win rates after preference alignment.
-        </p>
-      </div>
-
-    </div>
+        <figure class="research-figure ideation-figure">
+          <a class="figure-link" href="static/images/thinker_winrate.png" target="_blank" rel="noopener noreferrer"
+             aria-label="Open Scientific Thinker win rates at full size">
+            <img src="static/images/thinker_winrate.png" width="1244" height="1106"
+                 alt="Scientific Thinker win rates against strong baseline models."
+                 loading="lazy" decoding="async"/>
+          </a>
+          <figcaption class="figure-caption">
+            <span>Scientific Thinker win rates after preference alignment.</span>
+            <a href="static/images/thinker_winrate.png" target="_blank" rel="noopener noreferrer" aria-label="View Scientific Thinker win rates at full size">View full size ↗</a>
+          </figcaption>
+        </figure>
+        </div>
   </div>
 </section>
 
 
 
 <section class="section citation-section" id="citation">
-  <div class="container reading-container content citation-content">
+  <div class="container is-max-desktop content citation-content">
     <h2 class="title is-3  has-text-centered">Citation</h2>
     <pre><code>@article{tong2026ai,
   title={AI Can Learn Scientific Taste},
@@ -686,6 +670,6 @@
   </div>
 </section>
 
-
+</main>
 </body>
 </html>
