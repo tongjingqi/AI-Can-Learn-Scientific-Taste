@@ -84,7 +84,7 @@ If you find our work helpful, please consider citing:
 ```bibtex
 @article{tong2026ai,
   title={AI Can Learn Scientific Taste},
-  author={Tong, Jingqi and Li, Mingzhe and Li, Hangcheng and Yang, Yongzhuo and Mou, Yurong and Ma, Weijie and Xi, Zhiheng and Chen, Hongji and Liu, Xiaoran and Cheng, Qinyuan and others},
+  author={Tong, Jingqi and Li, Mingzhe and Li, Hangcheng and Yang, Yongzhuo and Mou, Yurong and Ma, Weijie and Chen, Hongji and Liu, Xiaoran and Cheng, Qinyuan and Zhang, Ming and Chen, Qiguang and Ge, Weifeng and Guo, Qipeng and Ying, Tianlei and Sun, Tianxiang and Zheng, Yining and Xi, Zhiheng and Chen, Xinchi and Zhao, Jun and Ding, Ning and Huang, Xuanjing and Jiang, Yu-Gang and Qiu, Xipeng},
   journal={arXiv preprint arXiv:2603.14473},
   year={2026}
 }
