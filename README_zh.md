@@ -102,7 +102,7 @@ RLCF 包含三个阶段：
 ```bibtex
 @misc{tong2026ailearnscientifictaste,
     title={AI Can Learn Scientific Taste},
-    author={Jingqi Tong and Mingzhe Li and Hangcheng Li and Yongzhuo Yang and Yurong Mou and Weijie Ma and Zhiheng Xi and Hongji Chen and Xiaoran Liu and Qinyuan Cheng and Ming Zhang and Qiguang Chen and Weifeng Ge and Qipeng Guo and Tianlei Ying and Tianxiang Sun and Yining Zheng and Xinchi Chen and Jun Zhao and Ning Ding and Xuanjing Huang and Yu-Gang Jiang and Xipeng Qiu},
+    author={Jingqi Tong and Mingzhe Li and Hangcheng Li and Yongzhuo Yang and Yurong Mou and Weijie Ma and Hongji Chen and Xiaoran Liu and Qinyuan Cheng and Ming Zhang and Qiguang Chen and Weifeng Ge and Qipeng Guo and Tianlei Ying and Tianxiang Sun and Yining Zheng and Zhiheng Xi and Xinchi Chen and Jun Zhao and Ning Ding and Xuanjing Huang and Yu-Gang Jiang and Xipeng Qiu},
     year={2026},
     eprint={2603.14473},
     archivePrefix={arXiv},
